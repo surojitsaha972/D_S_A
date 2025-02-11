@@ -1,4 +1,5 @@
 # LIFO(Last In First Out) or FILO(First In Last Out)
+# Ex.: Pline of books,stack of dinner plates etc.
 
 # stack=[]
 # stack.append(10)
