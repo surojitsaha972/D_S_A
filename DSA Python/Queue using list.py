@@ -1,3 +1,4 @@
+# Queue is linear data structure.
 # FIFO(First In First Out) & LILO(Last In Last Out)
 # In queue, Process to add element is called ENQUEUE and remove element is called DEQUEUE.
 # Ex.: Customer service, banking etc.
