@@ -36,7 +36,7 @@
 
 # .............INSERT OPERATIONS..............
 
-# ...At Begining...
+# ...At the Begining...
 
 class Node:
     def __init__(self,data):
@@ -65,3 +65,6 @@ LL.ins_begin(10)
 LL.ins_begin(20)
 LL.ins_begin(30)
 LL.printLL()
+
+# ...At the Ending...
+
