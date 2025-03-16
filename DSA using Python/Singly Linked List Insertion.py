@@ -12,8 +12,6 @@
 
 # .............INSERT OPERATIONS..............
 
-# .....At the Begining.....
-
 class Node:
     def __init__(self,data):
         self.data=data
@@ -31,6 +29,8 @@ class linkedlist:
             while n!=None:
                 print(n.data)
                 n=n.ref
+
+# .....At the Begining.....
     
     def ins_begin(self,data):
         new_node=Node(data)
@@ -67,13 +67,34 @@ class linkedlist:
       
 # .....In_Between (Before giving node).....         
 
-
+    def before_node(self,data,x):
+        n=self.head
+        if n==None:
+            print("Node is Empty in Linked List!")
+            return
+        if n.data== x:
+            new_node=Node(data)
+            new_node.ref=self.head
+            self.head=new_node
+            return
+        while n.ref!=None:
+            if n.ref.data==x:
+                break
+            n=n.ref
+        if n.ref==None:
+            print("Node is not found")
+        else:
+            new_node=Node(data)
+            new_node.ref=n.ref
+            n.ref = new_node
+        
 
 
 LL=linkedlist()
 LL.ins_begin(10)
 LL.ins_end(50)
 LL.ins_begin(30)
-LL.after_node(70,30)
 LL.ins_begin(20)
+LL.after_node(70,10)
+LL.before_node(80,70)
 LL.printLL()
