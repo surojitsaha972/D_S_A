@@ -25,15 +25,36 @@ class linkedlist:
         new_node.ref=self.head
         self.head=new_node
 
-    def delete(self):
+    def del_begin(self):
         if self.head == None:
             print("Linked List is empty!")
         else:
             self.head=self.head.ref
 
+    def del_end(self):
+        if self.head == None:
+            print("Linked List is empty!")
+        elif self.head.ref is None:
+            self.head=None
+        else:
+            n=self.head
+            while n.ref.ref is not None:
+                n=n.ref
+            n.ref=None
+
+    def del_by_value(self):
+        if self.head == None:
+            print("Linked List is empty!")
+        else:
+            pass
+
+
 link=linkedlist()
 link.insert(10)
 link.insert(20)
 link.insert(30)
-link.delete()
+link.insert(40)
+link.insert(50)
+link.del_begin()
+link.del_end()
 link.printLL()
